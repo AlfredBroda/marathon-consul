@@ -224,6 +224,6 @@ func (app App) extractPortDefinitions() []PortDefinition {
 	} else {
 		appPortDefinitions = app.PortDefinitions
 	}
-	
+
 	return appPortDefinitions
 }

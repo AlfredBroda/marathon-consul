@@ -36,7 +36,7 @@ build-deps: deps format test check
 	@mkdir -p bin/
 
 build: build-deps
-	go build $(LD_FLAGS) -o bin/marathon-consul
+	CGO_ENABLED=0 go build $(LD_FLAGS) -o bin/marathon-consul
 
 build-linux: build-deps
 	CGO_ENABLED=0 GOOS=linux go build -a -tags netgo $(LD_FLAGS) -o bin/marathon-consul
